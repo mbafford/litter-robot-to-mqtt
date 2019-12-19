@@ -52,7 +52,11 @@ sock_server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock_server.bind(('0.0.0.0', PORT_SERVER))
 
 def handle_from_litter( raw_data, addr ):
-    msg = raw_data.strip().decode()
+    try:
+        msg = raw_data.strip().decode()
+    except:
+        log("handle_from_litter: error parsing %s from %s" % (raw_data, addr))
+        return
 
     log("%-27s %-16s %5d FROM_LITTER OK  %s" % ( datetime.datetime.now().isoformat(), addr[0], addr[1], msg ) )
 
@@ -83,7 +87,12 @@ def handle_from_litter( raw_data, addr ):
     return
 
 def handle_from_server( raw_data, addr ):
-    msg = raw_data.strip().decode()
+    try:
+        msg = raw_data.strip().decode()
+    except:
+        log("handle_from_server: error parsing %s from %s" % (raw_data, addr))
+        return
+
 
     log("%-27s %-16s %5d FROM_SERVER OK  %s" % ( datetime.datetime.now().isoformat(), addr[0], addr[1], msg ) )
 
