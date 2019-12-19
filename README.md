@@ -23,6 +23,7 @@ Related projects:
 * UDP based (also hasn't figured out the checksum): https://github.com/mannkind/litterrobot/
 * HTTP API based (Spelunk): https://github.com/sover02/ta-litter-robot
 * HTTP API based (SmartThings App/DTH): https://github.com/natekspencer/LitterRobotManager/
+* HTTP API based (Home Assistant): https://github.com/joshjcarrier/homeassistant-litter-robot
     
 ----
 
