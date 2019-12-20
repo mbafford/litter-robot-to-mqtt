@@ -1,9 +1,9 @@
 #!/bin/bash
 
-ID=$(sudo docker ps -f ancestor=litter_robot_intercept -q)
+ID=$(sudo docker ps -a -f ancestor=litter_robot_intercept -q)
 
 if [[ -z "$ID" ]]; then
-    echo "No litter roboto monitor process running"
+    echo "No litter robot monitor process running"
     exit 0
 fi
 

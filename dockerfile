@@ -5,4 +5,4 @@ ADD requirements.txt /
 
 RUN pip install -r /requirements.txt
 
-CMD [ "python", "litter-robot-intercept.py", "/litter-robot/intercept.log" ]
+CMD [ "python", "litter-robot-intercept.py", "/litter-robot/messages.db", "/litter-robot/intercept.log" ]
