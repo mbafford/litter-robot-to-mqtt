@@ -1,3 +1,7 @@
+# Status
+
+Still working perfectly, as of 2022-11-18, exactly as described below, still using Inovelli light switches as around-the-house indicators.
+
 # Introduction
 
 For:
